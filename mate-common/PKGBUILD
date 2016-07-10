@@ -1,0 +1,27 @@
+# Maintainer : Martin Wimpress <code@flexion.org>
+# Contributor : Xpander <xpander0@gmail.com>
+
+_ver=1.14
+pkgname=mate-common
+pkgver=${_ver}.0
+pkgrel=1
+pkgdesc="Common development macros for MATE"
+arch=('any')
+license=('GPL')
+depends=('autoconf' 'automake' 'gettext' 'gtk-doc' 'intltool' 'libtool'
+         'pkg-config')
+url="http://mate-desktop.org"
+source=("http://pub.mate-desktop.org/releases/${_ver}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('SKIP')
+
+build() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    ./configure \
+        --prefix=/usr
+    make
+}
+
+package() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    make DESTDIR="${pkgdir}" install
+}

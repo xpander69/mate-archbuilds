@@ -1,0 +1,31 @@
+# $Id: PKGBUILD 148345 2015-12-04 11:04:13Z flexiondotorg $
+# Maintainer : Martin Wimpress <code@flexion.org>
+# Contributor : Xpander <xpander0@gmail.com>
+
+_ver=1.14
+pkgname=libmatemixer
+pkgver=${_ver}.0
+pkgrel=1
+pkgdesc="Mixer library for MATE Desktop"
+url="http://mate-desktop.org"
+arch=('i686' 'x86_64')
+license=('LGPL')
+depends=('alsa-lib' 'libpulse')
+makedepends=('mate-common')
+source=("http://pub.mate-desktop.org/releases/${_ver}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('SKIP')
+
+build() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --disable-static
+    make
+}
+
+package() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    make DESTDIR="${pkgdir}" install
+}

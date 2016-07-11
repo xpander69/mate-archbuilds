@@ -10,7 +10,6 @@ listofpackages=(
     libmatemixer
     mate-icon-theme
     mate-icon-theme-faenza
-    mate-dialogs
     mate-desktop
     caja
     mate-notification-daemon
@@ -25,14 +24,19 @@ listofpackages=(
     pluma
     engrampa
     atril
+    eom
+    mozo
     mate-media
     mate-power-manager
     python2-caja
     caja-extensions
     mate-applets
+    mate-utils
     mate-screensaver
+    mate-terminal
     mate-sensors-applet
     mate-user-share
+    mate-user-guide
     )
     
 

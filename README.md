@@ -10,8 +10,8 @@ MateScript.sh should take care of building and installing packages as you progre
 - Use it at your own risk. I am  not responsible for your system instabilities or broken packages.
 
 # Download
--For those who don't know or want to compile
--Only x86_64 builds and gtk2
+- For those who don't know or want to compile
+- Only x86_64 builds and gtk2
 
 https://drive.google.com/file/d/0B5ebeh_twYb_SzNKckpsZ0xPelU/view?usp=sharing
 

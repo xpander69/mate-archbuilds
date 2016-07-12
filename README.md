@@ -8,3 +8,11 @@ MateScript.sh should take care of building and installing packages as you progre
 - Warning! Those PKGBUILDs don't have sha256 or md5 sums.
 - gtk3 builds are disabled
 - Use it at your own risk. I am  not responsible for your system instabilities or broken packages.
+
+# Download
+-For those who don't know or want to compile
+-Only x86_64 builds and gtk2
+
+https://drive.google.com/file/d/0B5ebeh_twYb_SzNKckpsZ0xPelU/view?usp=sharing
+
+Install with pacman -U
